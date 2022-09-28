@@ -32,9 +32,9 @@ if (login()) {
     let saldo = 3325;
     let gigas = 0;
 
-    let consulta = prompt('Elija la opcción deseada: \n1- Consulta de saldo \n2 - Mini-recarga \n3 - Pedir-Gbs \nPresioná X para finalizar.');
+    let consulta = prompt('Elija la opcción deseada: \n1- Consulta de saldo \n2 - Mini-recarga \n3 - Pedir-Gbs \nDigite 0 para finalizar.');
 
-    while (consulta != 'X' && consulta != 'x') {
+    while (consulta != '0' && consulta != 'o') {
 
         switch (consulta) {
 
@@ -58,7 +58,7 @@ if (login()) {
                 gigas += recarGbs;
                 // Es equivalente a la linea anterior
                 //saldo = saldo+deposito;
-                alert('Gracias por recargar. Tenés: ' + gigas + 'GBs para navegar');
+                alert('Gracias por recargar. Tenés: ' + gigas + 'GBs para navegar \nImpactará en tu próxima factura!');
                 break;
 
             default:
@@ -67,7 +67,7 @@ if (login()) {
 
         }
 
-        consulta = prompt('Elegí una opción: \n1- Consulta de saldo. \n2 - Mini-recarga. \n3 - Pedir-Gbs. \n Digite X para finalizar.');
+        consulta = prompt('Elija la opción deseada: \n1- Consulta de saldo. \n2 - Mini-recarga. \n3 - Pedir-Gbs. \n Digite 0 para finalizar.');
 
     }
 
